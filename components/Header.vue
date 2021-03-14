@@ -2,7 +2,7 @@
   <section class="Header">
     <div class="Header__Wrapper">
       <div class="Header__Icon Header__Menu" @click="active = !active">
-        Menu
+        Menu 
       </div>
     </div>
     <div class="Menu__Wrapper" :class="{ active: active }">
