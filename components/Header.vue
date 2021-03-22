@@ -7,11 +7,20 @@
     </div>
     <div class="Menu__Wrapper" :class="{ active: active }">
       <div class="grid grid-cols-2 gap-24">
-        <div></div>
-        <nuxt-link :to="localePath('introduce')">Giới thiệu</nuxt-link>
-        <div>Thông cáo báo chí</div>
-        <div>Tâm đạo / Trà đạo</div>
-        <div>Liên hệ</div>
+        <nuxt-link
+          @click.native="active = !active"
+          :to="localePath('introduce')"
+          >Giới thiệu</nuxt-link
+        >
+        <nuxt-link @click.native="active = !active" :to="localePath('news')"
+          >Thông cáo báo chí</nuxt-link
+        >
+        <nuxt-link @click.native="active = !active" :to="localePath('blogs')"
+          >Tâm đạo / Trà đạo</nuxt-link
+        >
+        <nuxt-link @click.native="active = !active" :to="localePath('contact')"
+          >Liên hệ</nuxt-link
+        >
       </div>
     </div>
   </section>
@@ -48,7 +57,6 @@ export default {
   @apply transition duration-500 ease-in-out;
   @apply absolute invisible opacity-0 flex justify-center items-center;
   @apply m-auto;
-  height: 540px;
   top: 0;
   left: 0;
   bottom: 0;
