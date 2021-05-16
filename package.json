@@ -1,21 +1,54 @@
 {
-  "name": "tea",
+  "name": "zhen-tea",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate --mordern"
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "yarn lint:js",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
-    "core-js": "^3.8.3",
-    "nuxt": "^2.14.12"
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.9.1",
+    "nuxt": "^2.15.3"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^3.4.2",
-    "node-sass": "^5.0.0",
-    "nuxt-i18n": "^6.21.1",
-    "sass-loader": "10.1.1"
+    "@nuxtjs/eslint-config": "^6.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/tailwindcss": "^4.1.1",
+    "@vue/test-utils": "^1.1.3",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.7.0",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "nuxt-font-loader": "^1.1.3",
+    "nuxt-i18n": "^6.27.0",
+    "postcss": "^8.2.14",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.12",
+    "sass-loader": "10.1.1",
+    "vue-jest": "^3.0.4",
+    "vue-kinesis": "^1.2.3"
   }
 }

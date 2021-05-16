@@ -1,34 +1,102 @@
 <template>
-  <main class="h-screen">
-    <div class="Introduction__Wrapper">
-      <div class="Introduction__Left">
-        <div>
-          <div>Ảnh Thiên Nhiên</div>
-          <div>Logo Zhen Tea</div>
-        </div>
-        <div>Quán Trà Zhen Tea</div>
-        <div class="Address">Địa chỉ</div>
+  <main class="">
+    <section class="relative flex items-center justify-center h-screen">
+      <picture>
+        <img
+          src="~/assets/img/tea-field.jpg"
+          alt=""
+          srcset=""
+          class="absolute inset-0 z-[-1] h-full w-full object-cover"
+        />
+      </picture>
+      <div class="font-bold text-center">
+        <h2 class="text-[86px] text-white">
+          Hiệp hội
+          <span class="text-[86px] text-primary-light">phục hưng </span>
+        </h2>
+        <h2 class="text-[86px] text-white">
+          <span class="text-[86px] text-primary-light">văn hóa </span> truyền
+          thống
+        </h2>
       </div>
-      <div class="Introduction__RIght">Bố cục bên phải</div>
-    </div>
+      <kinesis-container
+        class="absolute inset-0 object-contain w-full m-auto h-4/5"
+      >
+        <kinesis-element :strength="10">
+          <picture>
+            <img src="~/assets/img/leaves-texture.png" alt="" srcset="" />
+          </picture>
+        </kinesis-element>
+      </kinesis-container>
+    </section>
+    <section class="flex flex-col justify-center about-us">
+      <h2 class="font-black text-center text-primary text-72">VỀ CHÚNG TÔI</h2>
+      <ul
+        class="flex flex-col w-1/2 mx-auto text-justify gap-y-8 mt-[60px] text-18"
+      >
+        <li>
+          Hiệp hội phục hưng văn hóa truyền thống (Association for the revival
+          of traditional culture) hay còn gọi là ZHEN CULTURE - Chân Văn hóa
+        </li>
+        <li>
+          Được thành lập tại thủ đô Paris (CH Pháp) mang theo động lực khôi phục
+          và phát huy văn hóa truyền thống.
+        </li>
+        <li>
+          Tĩnh lặng học hỏi và đối chiếu với những giá trị truyền thống, chúng
+          ta mới thấy được Chân giá trị nội tại và phát triển những bản năng,
+          năng lực của chính mình, để từ đó ứng dụng vào suy nghĩ, hành động,
+          việc làm
+        </li>
+      </ul>
+    </section>
+    <section class="mt-[120px] mb-24">
+      <h2 class="font-black text-center text-primary text-72 mb-[60px]">
+        NGÔI NHÀ ZHEN TEA
+      </h2>
+      <div class="container flex gap-x-8">
+        <div class="w-1/2">
+          <ul class="flex flex-col text-justify gap-y-8 text-18">
+            <li>
+              Ngôi nhà Zhentea được tổ chức bởi Hiệp hội phục hưng văn hóa
+              truyền thống, mang theo động lực khôi phục văn hóa Trà và phát
+              triển Chân giá trị nhân sinh.
+            </li>
+            <li>
+              Zhentea là nơi giúp chúng ta tách khỏi đời sống tấp nập, bận rộn.
+              Cho phép chúng ta chậm rãi một chút, để đôi chân được nghỉ ngơi
+              một chút và tâm hồn được thư giãn một chút. Cho ta nhìn lại chính
+              mình, nhìn lại con đường mình đang đi, về mục tiêu mình đã chọn.
+              Từ đó hiểu được rằng đâu là con người thựcsự của mình, đâu là Chân
+              giá trị và đâu là mục tiêu chân chính của cuộc đời
+            </li>
+            <li>Zhentea là một ngôi nhà nhỏ Bình Yên cho tất cả chúng ta.</li>
+          </ul>
+          <button
+            class="px-8 py-2 text-white rounded-full bg-primary mt-9 ml-[54px]"
+          >
+            Xem thêm
+          </button>
+        </div>
+        <div class="w-1/2">
+          <picture>
+            <img src="~/assets/img/lotus-teapot.jpg" alt="ALT" srcset="" />
+          </picture>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
-export default {};
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
+
+export default {
+  components: {
+    KinesisContainer,
+    KinesisElement,
+  },
+}
 </script>
 
-<style lang="scss" scoped>
-.Introduction__Wrapper {
-  @apply flex items-stretch h-full;
-}
-.Introduction__Left {
-  width: 200px;
-  border-right: 1px solid #ccc;
-
-  @apply flex flex-col justify-between;
-}
-.Introduction__Right {
-  @apply flex-grow;
-}
-</style>
+<style lang="scss" scoped></style>

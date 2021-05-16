@@ -1,3 +1,42 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  @apply font-display;
+}
+
+// ul {
+//   list-style-image: url('~/assets/img/leaf-marker.jpg');
+//   width: 19px;
+//   height: 13px;
+// }
+
+ul {
+  @apply pl-8;
+}
+li {
+  // list-style: none;
+  list-style-image: url('~/assets/img/leaf-marker.jpg');
+  @apply pl-4;
+}
+li:before {
+  // content: '';
+  // display: inline-block;
+  // width: 19px;
+  // height: 13px;
+  // background-image: url('~/assets/img/leaf-marker.jpg');
+  // background-size: 19px 13px;
+}
+
+.about-us {
+  background: url('~/assets/img/about-us.jpg');
+  background-size: cover;
+  height: 689px;
+}
+
+::selection {
+  // color: red;
+  // background: yellow;
+  @apply bg-primary-light;
+}

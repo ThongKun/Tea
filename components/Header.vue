@@ -1,28 +1,13 @@
 <template>
   <section class="Header">
-    <div class="Header__Wrapper">
-      <div class="Header__Icon Header__Menu" @click="active = !active">
-        Menu
-      </div>
-    </div>
-    <div class="Menu__Wrapper" :class="{ active: active }">
-      <div class="grid grid-cols-2 gap-24">
-        <nuxt-link
-          @click.native="active = !active"
-          :to="localePath('introduce')"
-          >Giới thiệu</nuxt-link
-        >
-        <nuxt-link @click.native="active = !active" :to="localePath('news')"
-          >Thông cáo báo chí</nuxt-link
-        >
-        <nuxt-link @click.native="active = !active" :to="localePath('blogs')"
-          >Tâm đạo / Trà đạo</nuxt-link
-        >
-        <nuxt-link @click.native="active = !active" :to="localePath('contact')"
-          >Liên hệ</nuxt-link
-        >
-      </div>
-    </div>
+    <picture>
+      <img
+        src="~/assets/img/zhen-tea-logo.png"
+        alt=""
+        srcset=""
+        class="absolute h-[130px] left-1/2 transform -translate-x-1/2 mt-[42px]"
+      />
+    </picture>
   </section>
 </template>
 
@@ -30,42 +15,8 @@
 export default {
   data() {
     return {
-      active: false
-    };
-  }
-};
+      active: false,
+    }
+  },
+}
 </script>
-
-<style></style>
-
-<style lang="scss" scoped>
-.Header__Wrapper {
-  @apply absolute right-0 inset-y-0 flex justify-center items-center;
-  border-left: 1px solid black;
-  width: 60px;
-}
-
-.Header__Menu {
-  @apply cursor-pointer;
-
-  &:hover {
-    @apply text-primary-darker;
-  }
-}
-
-.Menu__Wrapper {
-  @apply transition duration-500 ease-in-out;
-  @apply absolute invisible opacity-0 flex justify-center items-center;
-  @apply m-auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 60px;
-  background: yellow;
-
-  &.active {
-    @apply transition duration-500 ease-in-out;
-    @apply visible opacity-100;
-  }
-}
-</style>

@@ -1,25 +1,18 @@
-import i18n from "./config/i18n.js";
+import i18n from './config/i18n.js'
 
 export default {
-  target: "static", // default is 'server'
+  // Target: https://go.nuxtjs.dev/config-target
+  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "tea",
-    htmlAttrs: {
-      lang: "en"
-    },
+    title: 'zhen-tea',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
-  },
-
-  tailwindcss: {
-    cssPath: "~/assets/scss/global.scss",
-    configPath: "tailwind.config.js"
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -33,15 +26,52 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
-    "@nuxtjs/tailwindcss"
+    '@nuxtjs/tailwindcss',
+    // https://www.npmjs.com/package/nuxt-font-loader
+    'nuxt-font-loader',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["nuxt-i18n"],
+  modules: [
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios',
+    // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/pwa',
+    // https://go.nuxtjs.dev/content
+    '@nuxt/content',
+    'nuxt-i18n',
+  ],
+
+  fontLoader: {
+    /* module options */
+    url:
+      'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap',
+    prefetch: true,
+    preconnect: true,
+  },
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {},
+
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  pwa: {
+    manifest: {
+      lang: 'en',
+    },
+  },
+
+  // Content module configuration: https://go.nuxtjs.dev/config-content
+  content: {},
+
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {},
 
   i18n,
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
-};
+  tailwindcss: {
+    cssPath: '~/assets/scss/global.scss',
+  },
+}

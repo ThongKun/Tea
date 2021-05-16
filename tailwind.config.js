@@ -1,45 +1,58 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [],
+  mode: 'jit',
+  purge: [
+    `~/components/**/*.{vue,js}`,
+    `~/layouts/**/*.vue`,
+    `~/pages/**/*.vue`,
+    `~/plugins/**/*.{js,ts}`,
+    `~~/nuxt.config.{js,ts}`,
+  ],
   theme: {
+    container: {
+      center: true,
+    },
     colors: {
-      transparent: "transparent",
-      current: "currentColor",
+      transparent: 'transparent',
+      current: 'currentColor',
 
-      black: "#333333",
-      white: "#fff",
+      black: '#333333',
+      white: '#fff',
 
-      primary: "#C02428",
-      "primary-dark": "#333333",
-      "primary-darker": "#DB5F00",
-      "primary-light": "#FFF0DD",
-      "primary-light-2": "#DACAAD",
-      "primary-light-3": "#FAF5F5",
+      primary: '#88B44E',
+      'primary-light': '#C5FF79',
       gray: {
-        100: "#E5E5E5", // Lightest
-        200: "#727272",
-        300: "#79797C",
-        400: "#A1A6AF",
-        500: "#FAFAFA",
-        600: "#F2F2F2",
-        46: "#757575",
-        700: "#595959",
-        f6: "#f6f6f6"
+        100: '#E5E5E5', // Lightest
+        200: '#727272',
+        300: '#79797C',
+        400: '#A1A6AF',
+        500: '#FAFAFA',
+        600: '#F2F2F2',
+        46: '#757575',
+        700: '#595959',
+        f6: '#f6f6f6',
       },
 
       green: {
-        400: "#68d391"
+        400: '#68d391',
       },
 
       blue: {
-        400: "#143369"
-      }
+        400: '#143369',
+      },
     },
-    extend: {}
+    fontSize: {
+      14: ['14px'],
+      16: ['16px'],
+      18: ['18px'],
+      20: ['20px'],
+      24: ['24px'],
+      72: ['72px'],
+    },
+    fontFamily: {
+      display: ['Playfair Display', 'serif'],
+    },
+    extend: {},
   },
   variants: {},
-  plugins: []
-};
+  plugins: [],
+}
