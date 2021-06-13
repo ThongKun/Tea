@@ -11,12 +11,8 @@
       </picture>
       <div class="font-bold text-center">
         <h2 class="text-[86px] text-white">
-          Hiệp hội
-          <span class="text-[86px] text-primary-light">phục hưng </span>
-        </h2>
-        <h2 class="text-[86px] text-white">
-          <span class="text-[86px] text-primary-light">văn hóa </span> truyền
-          thống
+          Văn Hóa
+          <span class="text-[86px] text-primary-light">Trà</span>
         </h2>
       </div>
       <kinesis-container
@@ -32,7 +28,15 @@
     <section class="flex flex-col justify-center about-us">
       <h2 class="font-black text-center text-primary text-72">VỀ CHÚNG TÔI</h2>
       <ul
-        class="flex flex-col w-1/2 mx-auto text-justify gap-y-8 mt-[60px] text-18"
+        class="
+          flex flex-col
+          w-1/2
+          mx-auto
+          text-justify
+          gap-y-8
+          mt-[60px]
+          text-18
+        "
       >
         <li>
           Hiệp hội phục hưng văn hóa truyền thống (Association for the revival
