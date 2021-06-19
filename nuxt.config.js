@@ -6,7 +6,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'zhen-tea',
+    title: 'Zhen Tea',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -47,8 +47,7 @@ export default {
 
   fontLoader: {
     /* module options */
-    url:
-      'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap',
+    url: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap',
     prefetch: true,
     preconnect: true,
   },
