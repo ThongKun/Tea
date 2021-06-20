@@ -10,6 +10,10 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '0',
+      },
     },
     colors: {
       transparent: 'transparent',
@@ -46,6 +50,7 @@ module.exports = {
       18: ['18px'],
       20: ['20px'],
       24: ['24px'],
+      48: ['48px'],
       72: ['72px'],
     },
     fontFamily: {

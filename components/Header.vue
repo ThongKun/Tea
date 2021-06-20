@@ -20,3 +20,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.Header img {
+  @media screen and (max-width: 400px) {
+    @apply px-5;
+  }
+}
+</style>

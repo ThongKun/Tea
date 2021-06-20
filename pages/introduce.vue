@@ -10,9 +10,9 @@
         />
       </picture>
       <div class="font-bold text-center">
-        <h2 class="text-[86px] text-white">
+        <h2 class="text-48 md:text-[86px] text-white">
           Văn Hóa
-          <span class="text-[86px] text-primary-light">Trà</span>
+          <span class="text-48 md:text-[86px] text-primary-light">Trà</span>
         </h2>
       </div>
       <kinesis-container
@@ -25,17 +25,21 @@
         </kinesis-element>
       </kinesis-container>
     </section>
-    <section class="flex flex-col justify-center about-us">
-      <h2 class="font-black text-center text-primary text-72">VỀ CHÚNG TÔI</h2>
+    <section class="container flex flex-col justify-center h-screen about-us">
+      <h2 class="font-black text-center text-primary text-48 md:text-72">
+        VỀ CHÚNG TÔI
+      </h2>
       <ul
         class="
           flex flex-col
-          w-1/2
+          xl:w-1/2
+          md:w-3/4
           mx-auto
           text-justify
           gap-y-8
           mt-[60px]
-          text-18
+          text-16
+          md:text-18
         "
       >
         <li>
@@ -55,12 +59,20 @@
       </ul>
     </section>
     <section class="mt-[120px] mb-24">
-      <h2 class="font-black text-center text-primary text-72 mb-[60px]">
+      <h2
+        class="
+          font-black
+          text-center text-primary text-48
+          md:text-72
+          mb-8
+          md:mb-[60px]
+        "
+      >
         NGÔI NHÀ ZHEN TEA
       </h2>
-      <div class="container flex gap-x-8">
-        <div class="w-1/2">
-          <ul class="flex flex-col text-justify gap-y-8 text-18">
+      <div class="container flex flex-col md:flex-row gap-x-8">
+        <div class="order-2 md:w-1/2 md:order-1">
+          <ul class="flex flex-col text-justify gap-y-8 text-16 md:text-18">
             <li>
               Ngôi nhà Zhentea được tổ chức bởi Hiệp hội phục hưng văn hóa
               truyền thống, mang theo động lực khôi phục văn hóa Trà và phát
@@ -77,12 +89,22 @@
             <li>Zhentea là một ngôi nhà nhỏ Bình Yên cho tất cả chúng ta.</li>
           </ul>
           <button
-            class="px-8 py-2 text-white rounded-full bg-primary mt-9 ml-[54px]"
+            class="
+              block
+              mx-auto
+              px-8
+              py-2
+              text-white
+              rounded-full
+              bg-primary
+              mt-9
+              md:ml-[54px]
+            "
           >
             Xem thêm
           </button>
         </div>
-        <div class="w-1/2">
+        <div class="order-1 w-1/2 mx-auto md:order-2">
           <picture>
             <img src="~/assets/img/lotus-teapot.jpg" alt="ALT" srcset="" />
           </picture>
@@ -103,4 +125,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.about-us {
+  @media screen and (min-width: theme('screens.xl')) {
+    background: url('~/assets/img/about-us.jpg');
+    background-size: cover;
+  }
+}
+</style>

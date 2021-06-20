@@ -28,6 +28,9 @@ export default {}
 
 <style lang="scss" scoped>
 .Footer {
-  @apply text-center text-24 flex flex-col items-center mb-24;
+  @apply text-center flex flex-col items-center mb-24 text-16;
+  @media screen and (min-width: theme('screens.md')) {
+    @apply text-24;
+  }
 }
 </style>
