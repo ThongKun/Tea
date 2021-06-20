@@ -25,7 +25,9 @@
         </kinesis-element>
       </kinesis-container>
     </section>
-    <section class="container flex flex-col justify-center h-screen about-us">
+    <section
+      class="flex flex-col justify-center h-screen px-4 sm:px-0 about-us"
+    >
       <h2 class="font-black text-center text-primary text-48 md:text-72">
         VỀ CHÚNG TÔI
       </h2>
